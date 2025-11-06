@@ -121,10 +121,9 @@
                     </div>
                 </el-popover>
             </div>
-
-            <x-nav-link href="/" class="text-sm/6 font-semibold text-gray-900">Home</x-nav-link>
-            <x-nav-link href="/about" class="text-sm/6 font-semibold text-gray-900">About</x-nav-link>
-            <x-nav-link href="/contact" class="text-sm/6 font-semibold text-gray-900">Contact</x-nav-link>
+            <x-nav-link href="/" class="text-sm/6 font-semibold text-gray-900" :type="request()->is('/')?'button':'a'">Home</x-nav-link>
+            <x-nav-link href="/about" class="text-sm/6 font-semibold text-gray-900" :type="request()->is('about')?'button':'a'">About</x-nav-link>
+            <x-nav-link href="/contact" class="text-sm/6 font-semibold text-gray-900" :type="request()->is('contact')?'button':'a'">Contact</x-nav-link>
         </el-popover-group>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
